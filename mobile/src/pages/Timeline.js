@@ -33,7 +33,7 @@ export default class Timeline extends Component {
     }
 
     subscribeToEvents = () => {
-        const io = socket('http://192.168.2.7:3000');
+        const io = socket("http://e8d7dedc.ngrok.io");
         io.on('tweet', data => {
             this.setState({ tweets: [data, ...this.state.tweets] });
         });
